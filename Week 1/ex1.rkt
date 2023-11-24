@@ -38,7 +38,3 @@
 (define (div-real x y)
   (/ (* x 1.0) y)
   )
-
-
-;Task 2
-
