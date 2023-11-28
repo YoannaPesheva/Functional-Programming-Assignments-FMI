@@ -5,8 +5,6 @@ Two numbers are amicable if the sum of the divisors of one of them is equal
 to the other. Define a predicate that checks whether two numbers are amicable.
 |#
 
-
-
 (define (amicable? x y)
   (= (divisor-sum x) (divisor-sum y))
   )
