@@ -7,11 +7,8 @@ main = do
     print $ areAmicable 2620 2924 == True
     print $ areAmicable 6232 6368 == True
 
-sumOfDivisors :: Int -> Int -> Int
-sumOfDivisors x iter
-    | iter == 0 = 0
-    | mod x iter == 0 = iter + sumOfDivisors x (iter - 1)
-    | otherwise = sumOfDivisors x (iter - 1)
+sumOfDivisors :: Int -> Int
+sumOfDivisors x = sum [divisor | divisor <- [1 .. x], mod x divisor == 0]
 
 areAmicable :: Int -> Int -> Bool
-areAmicable x y = sumOfDivisors x x == sumOfDivisors y y
+areAmicable x y = sumOfDivisors x == sumOfDivisors y

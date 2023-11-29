@@ -8,9 +8,9 @@ main = do
 
 myGcdG :: Int -> Int -> Int
 myGcdG x y
-   | y == 0 = x
-   | x == 0 = y
-   | otherwise = myGcdG y (mod x y)
+ | y == 0 = x
+ | x == 0 = y
+ | otherwise = myGcdG y (mod x y)
 
 myGcdPM :: Int -> Int -> Int
 myGcdPM 0 y = y -- catches when x is 0, y is whatever

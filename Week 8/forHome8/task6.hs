@@ -14,14 +14,14 @@ main = do
 
 isPrimeG :: Int -> Bool
 isPrimeG x
-    | x < 2 = False
-    | otherwise = helper 2
+ | x < 2 = False
+ | otherwise = helper 2
      where
         helper :: Int -> Bool
         helper divisor
-            | divisor >= x = True
-            | mod x divisor == 0 = False
-            | otherwise = helper (divisor + 1)
+         | divisor >= x = True
+         | mod x divisor == 0 = False
+         | otherwise = helper (divisor + 1)
 
 isPrimeLC :: Int -> Bool
-isPrimeLC x = null [divisor | divisor <- [2 .. (x - 1)], mod x divisor == 0] && x >= 2
+isPrimeLC x = null [divisor | divisor <- [2 .. x - 1], mod x divisor == 0] && x >= 2
